@@ -1,6 +1,6 @@
 # Compi Frontend
 
-Animated, streaming chat UI for the Compi chatbot. Talks to the the backend (`../backend`)
+Animated, streaming chat UI for the Compi chatbot. Talks to the backend (`../backend`)
 API gateway.
 
 ## Stack
@@ -51,7 +51,7 @@ VITE_API_BASE=http://localhost:8000
 - Responsive layout with a slide-in sidebar on mobile
 - Error toasts; auto-logout + redirect to login on `401`
 
-## API contract (from the backend (`../backend`))
+## API contract (from `../backend`)
 
 | Method | Path                                          | Notes                          |
 | ------ | --------------------------------------------- | ------------------------------ |
