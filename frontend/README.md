@@ -1,6 +1,6 @@
 # Compi Frontend
 
-Animated, streaming chat UI for the Compi chatbot. Talks to the `compi-backend`
+Animated, streaming chat UI for the Compi chatbot. Talks to the the backend (`../backend`)
 API gateway.
 
 ## Stack
@@ -14,7 +14,7 @@ API gateway.
 
 ## Prerequisites
 
-The backend gateway must be running on `http://localhost:8000`. From `../compi-backend`:
+The backend gateway must be running on `http://localhost:8000`. From `../backend`:
 
 ```bash
 docker compose up
@@ -51,7 +51,7 @@ VITE_API_BASE=http://localhost:8000
 - Responsive layout with a slide-in sidebar on mobile
 - Error toasts; auto-logout + redirect to login on `401`
 
-## API contract (from `compi-backend`)
+## API contract (from the backend (`../backend`))
 
 | Method | Path                                          | Notes                          |
 | ------ | --------------------------------------------- | ------------------------------ |
