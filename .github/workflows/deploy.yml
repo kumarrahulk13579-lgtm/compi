@@ -3,6 +3,9 @@ name: Build and Push Images
 on:
   push:
     branches: [main]
+    paths:
+      - 'backend/**'
+      - '.github/workflows/deploy.yml'
 
 jobs:
   build:
@@ -29,8 +32,8 @@ jobs:
       - name: Build and push auth-service
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: auth-service/Dockerfile
+          context: backend
+          file: backend/auth-service/Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/compi-auth:latest
           cache-from: type=gha,scope=auth
@@ -39,8 +42,8 @@ jobs:
       - name: Build and push chat-service
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: chat-service/Dockerfile
+          context: backend
+          file: backend/chat-service/Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/compi-chat:latest
           cache-from: type=gha,scope=chat
@@ -49,8 +52,8 @@ jobs:
       - name: Build and push gateway-service
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: gateway-service/Dockerfile
+          context: backend
+          file: backend/gateway-service/Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/compi-gateway:latest
           cache-from: type=gha,scope=gateway
